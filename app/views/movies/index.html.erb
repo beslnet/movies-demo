@@ -1,0 +1,40 @@
+<div class = "jumbotron">
+	<h1>Ingreso de Películas</h1>
+	<% if notice %>
+	<div class="alert alert-success" role="alert">
+	<strong>Excelente!</strong> <%= notice %>
+	</div>
+	<% elsif alert %>
+	<div class="alert alert-warning" role="alert">
+	<strong>Warning!</strong> <%= alert %>
+	</div>
+	<% end %>
+
+<%= form_tag movies_save_movie_path, method: "post" do %>
+	<div class="form-group">
+		<%= label_tag :title, 'Título Película' %>
+		<%= text_field_tag :title, params[:title] , class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= label_tag :genre, 'Género' %>
+		<%= text_field_tag :genre, params[:genre] , class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= label_tag :year, 'Año' %>
+		<%= text_field_tag :year, params[:year] , class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= label_tag :rating, 'Rating' %>
+		<%= text_field_tag :rating, params[:rating] , class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= label_tag :studio, 'Estudio' %>
+		<%= text_field_tag :studio, params[:studio] , class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= submit_tag "Enviar", class:"btn btn-success" %>
+		<a href="/movies/show" class="btn btn-success" role="button">Mostrar películas</a>
+	</div>
+<% end %>
+
+</div>
