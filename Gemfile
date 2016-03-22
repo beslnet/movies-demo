@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -28,6 +29,10 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'pry-rails'
 gem 'quiet_assets'
 gem 'better_errors'
+
+gem 'rails_12factor'
+
+
 
 
 # Use ActiveModel has_secure_password
